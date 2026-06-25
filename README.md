@@ -1,14 +1,14 @@
 
 =========================================================================
-
 # 🔄 วิธีเปลี่ยน Repository ปลายทางที่จะอัปโหลดขึ้น GitHub
 
 ## 1️⃣ ตรวจสอบ Repository ปัจจุบัน
-ผลลัพธ์ตัวอย่าง
-```text
-origin  https://github.com/bisket77/SA.git (fetch)
-origin  https://github.com/bisket77/SA.git (push)
 
+รันคำสั่ง
+
+```bash
+git remote -v
+```
 ## 2️⃣ ลบ Git Repository เก่า (กรณีมี Git ซ้อนอยู่)
 
 ตัวอย่างลบ `.git` ในโฟลเดอร์ `week1`
@@ -27,12 +27,6 @@ Remove-Item -Recurse -Force "C:\Users\Asus TUF\Desktop\STUDENT 3\TERM 1\SA\week1
 git add .
 ```
 
-ตรวจสอบสถานะ
-
-```bash
-git status
-```
-
 หากไฟล์เป็นสีเขียว แสดงว่าพร้อม Commit
 
 ---
@@ -47,14 +41,6 @@ git commit -m "Add week1"
 
 ```bash
 git commit -m "Update project"
-```
-
-```bash
-git commit -m "Add frontend"
-```
-
-```bash
-git commit -m "Fix backend"
 ```
 
 ---
@@ -72,7 +58,6 @@ git branch -M main
 ```bash
 git push -u origin main
 ```
-
 ---
 
 ## 🚨 กรณี Push ไม่ได้ และต้องการเขียนทับข้อมูลบน GitHub
@@ -106,7 +91,7 @@ git push -u origin main
 ```bash
 git push -u origin main --force
 ```
-===========================
+===================================================================================================================================
 # 📌 สรุปปัญหา Git และวิธีแก้
 ## 1. Git ถูกสร้างผิดที่
 ### อาการ
@@ -316,4 +301,26 @@ git remote -v
 ```
 
 แบบนี้เอาไปใส่ `README.md` ได้เลย อ่านง่ายและเป็นขั้นตอนครับ 👍
+```
+
+1.หาตำแหน่งก่อน
+```
+git remote -v
+```
+ผลที่จะเห็น
+origin  https://github.com/bisket77/SA.git (fetch)
+origin  https://github.com/bisket77/SA.git (push)
+2.แล้วค่อยเปลี่ยน URL ใหม่
+```
+Remove-Item -Recurse -Force "C:\Users\Asus TUF\Desktop\STUDENT 3\TERM 1\SA\week1\.git"
+```
+3.ค่อย add แล้วดูสีว่าเขียวมั้ย
+```
+git add .
+git commit -m "add week1"
+git branch -M main
+git push -u origin main
+```
+```
+git push -u origin main --force
 ```
