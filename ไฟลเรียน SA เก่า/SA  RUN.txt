@@ -1,0 +1,52 @@
+SA : RUN 
+
+node js : คือตัวรัน java scrtip ผ่านตัวเครื่อง
+	npm ใช้จัดการ package ของ js 
+1.พิมพ์คำสั่งต่อไปนี้เพื่อตรวจสอบ Version ของ Node.js และ npm
+	$ node -v
+	$ npm -v
+2.สร้าง folder ใน Terminal พิมพ์คำสั่งต่อไปนี้เพื่อติดตั้ง React App + Vite
+
+	$ npm create vite@latest my-react-app
+ 		$ cd my-react-app   		#สำคัญมากตอนเข้า cd ต้องเข้าไปให้ถึงที่อยู่ตำแหน่งมัน
+	$ npm install		#ติดตั้ง โปรเจ็คจำลองก่อน
+	$ npm run dev		#ใช้สำหรับการรันเปิด Port --> http://localhost:5173
+ 	
+	
+3. สร้าง Docker 
+	1. สร้าง folder  
+		$ mkdir my-project
+		$ cd my-project
+		$ mkdir backend frontend
+
+	$ cd my-project #ต้องเข้าไปอยู่ที่ตำแหน่งที่มีไฟล์ docker
+	$ docker compose down -v
+	$ docker compose up -d		#สั่งรัน Docker Compose
+
+
+	พิมพ์คำสั่งสร้างระบบโมดูลของ Go และดึงไลบรารีของ GORM มาติดตั้ง:
+	$ cd backend
+	$go mod init backend
+	$go get gorm.io/gorm
+	$go get gorm.io/driver/postgres
+	
+go mod tidy = คำสั่งในภาษา Go ใช้จัดการและทำความสะอาดไลบรารีภายนอก จะสแกนไฟล์โค้ดทั้งหมดของคุณเพื่อดูว่ามีการเรียกใช้แพ็กเกจใดบ้าง จากนั้นจะดาวน์โหลดแพ็กเกจที่จำเป็น และลบแพ็กเกจที่ไม่ได้ใช้งานออกไปจากโปรเจ็กต์
+
+
+
+SELECE 
+
+
+
+echo "# test2" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/bisket77/test2.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/bisket77/test2.git
+git branch -M main
+git push -u origin main
+
