@@ -15,6 +15,9 @@ git remote -v
 
 ```powershell
 Remove-Item -Recurse -Force "C:\Users\Asus TUF\Desktop\STUDENT 3\TERM 1\SA\week1\.git"
+
+git remote set-url origin https://github.com/bisket77/lab-digital.git
+
 ```
 
 > ⚠️ คำสั่งนี้จะลบประวัติ Git ของโฟลเดอร์ `week1` เท่านั้น ไม่ได้ลบไฟล์งาน
